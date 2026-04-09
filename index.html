@@ -19,5 +19,27 @@
   <input type="text" id="userInput" placeholder="Ask something...">
   <button onclick="getAnswer()">Ask</button>
   <p id="response"></p>
+    <script>
+function getAnswer() {
+  let input = document.getElementById("userInput").value.toLowerCase();
+  let response = document.getElementById("response");
+
+  if (input.includes("exam")) {
+    response.innerText = "Exam registration ends on April 20";
+  } 
+  else if (input.includes("assignment")) {
+    response.innerText = "Math assignment is due tomorrow";
+  } 
+  else if (input.includes("scholarship")) {
+    response.innerText = "Scholarship deadline is April 15";
+  } 
+  else if (input.includes("email")) {
+    response.innerText = "Faculty email: faculty@college.edu";
+  }
+  else {
+    response.innerText = "Sorry, I don't have that info yet.";
+  }
+}
+</script>
 </body>
 </html>
