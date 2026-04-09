@@ -8,9 +8,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
-  /* ============================================================
-     RESET & ROOT VARIABLES
-  ============================================================ */
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   :root {
@@ -48,9 +45,6 @@
   h1, h2, h3, .brand { font-family: 'Syne', sans-serif; }
   button { font-family: 'DM Sans', sans-serif; cursor: pointer; }
 
-  /* ============================================================
-     LAYOUT SHELL
-  ============================================================ */
   .shell {
     display: flex;
     height: 100vh;
@@ -58,9 +52,6 @@
     overflow: hidden;
   }
 
-  /* ============================================================
-     OVERLAY
-  ============================================================ */
   .overlay {
     display: none;
     position: fixed;
@@ -72,9 +63,6 @@
   }
   .overlay.open { display: block; opacity: 1; }
 
-  /* ============================================================
-     DRAWER — PW-style slide-out panel
-  ============================================================ */
   .drawer {
     position: fixed;
     left: 0; top: 0; bottom: 0;
@@ -90,7 +78,6 @@
   }
   .drawer.open { transform: translateX(0); }
 
-  /* Drawer — profile header */
   .drw-profile {
     padding: 22px 20px 18px;
     background: linear-gradient(160deg, #1a2a50, #0d1830);
@@ -132,7 +119,6 @@
   }
   .drw-btn.highlight:hover { opacity: 0.88; }
 
-  /* Drawer — section label */
   .drw-section-label {
     padding: 14px 20px 8px;
     font-size: 10px; color: var(--text3);
@@ -140,7 +126,6 @@
     text-transform: uppercase; flex-shrink: 0;
   }
 
-  /* Drawer — icon grid */
   .drw-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -169,7 +154,6 @@
     padding: 1px 4px; border-radius: 4px; line-height: 1.4;
   }
 
-  /* Drawer — toggle rows */
   .drw-toggles { padding: 8px 16px; flex-shrink: 0; }
   .drw-toggle-row {
     display: flex; align-items: center; gap: 12px;
@@ -200,7 +184,6 @@
   }
   .toggle-sw.on::after { left: 19px; }
 
-  /* Drawer — sign out */
   .drw-signout {
     margin: 12px 16px 20px;
     padding: 9px; border-radius: var(--r-sm);
@@ -211,9 +194,6 @@
   }
   .drw-signout:hover { background: rgba(247, 111, 111, 0.18); }
 
-  /* ============================================================
-     ICON SIDEBAR — desktop only
-  ============================================================ */
   .sidebar {
     width: 64px; min-width: 64px;
     background: var(--bg2); border-right: 1px solid var(--border);
@@ -259,12 +239,8 @@
   }
   .sb-avatar:hover { opacity: 0.85; }
 
-  /* ============================================================
-     MAIN CONTENT AREA
-  ============================================================ */
   .main { flex: 1; display: flex; flex-direction: column; min-width: 0; height: 100vh; overflow: hidden; }
 
-  /* Topbar */
   .topbar {
     padding: 13px 22px; border-bottom: 1px solid var(--border);
     display: flex; align-items: center; justify-content: space-between;
@@ -299,15 +275,11 @@
     position: absolute; top: 5px; right: 5px;
   }
 
-  /* Scrollable content */
   .content { padding: 20px 22px; flex: 1; overflow-y: auto; }
   .content::-webkit-scrollbar { width: 4px; }
   .content::-webkit-scrollbar-track { background: transparent; }
   .content::-webkit-scrollbar-thumb { background: var(--surface3); border-radius: 2px; }
 
-  /* ============================================================
-     STAT CARDS
-  ============================================================ */
   .stats {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -335,9 +307,6 @@
   .sc-val    { font-size: 22px; font-weight: 700; font-family: 'Syne', sans-serif; line-height: 1; }
   .sc-label  { font-size: 11px; color: var(--text2); margin-top: 3px; }
 
-  /* ============================================================
-     QUICK ACCESS STRIP — PW-style
-  ============================================================ */
   .quick-strip {
     display: grid;
     grid-template-columns: repeat(8, minmax(0, 1fr));
@@ -357,14 +326,8 @@
   .qa-item:hover .qa-circle { background: var(--surface2); border-color: var(--accent); }
   .qa-lbl { font-size: 9.5px; color: var(--text2); text-align: center; line-height: 1.2; }
 
-  /* ============================================================
-     TWO-COLUMN GRID
-  ============================================================ */
   .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 20px; }
 
-  /* ============================================================
-     SECTION CARD
-  ============================================================ */
   .sec { background: var(--surface); border: 1px solid var(--border); border-radius: var(--r); overflow: hidden; }
   .sec-head {
     padding: 14px 16px; border-bottom: 1px solid var(--border);
@@ -375,9 +338,6 @@
   .see-all:hover { opacity: 0.7; }
   .sec-body { padding: 12px 16px; }
 
-  /* ============================================================
-     NOTICES
-  ============================================================ */
   .ni { display: flex; align-items: flex-start; gap: 10px; padding: 9px 0; border-bottom: 1px solid var(--border); }
   .ni:last-child { border-bottom: none; }
   .ni-dot  { width: 7px; height: 7px; border-radius: 50%; margin-top: 5px; flex-shrink: 0; }
@@ -385,9 +345,6 @@
   .ni-time  { font-size: 10px; color: var(--text3); margin-top: 2px; }
   .chip { display: inline-block; font-size: 9.5px; padding: 1px 6px; border-radius: 20px; margin-top: 3px; font-weight: 500; }
 
-  /* ============================================================
-     ASSIGNMENT DEADLINES
-  ============================================================ */
   .dl { display: flex; align-items: center; gap: 10px; padding: 8px 0; border-bottom: 1px solid var(--border); }
   .dl:last-child { border-bottom: none; }
   .dl-wrap  { flex: 1; min-width: 0; }
@@ -397,9 +354,6 @@
   .dl-fill  { height: 100%; border-radius: 2px; }
   .dl-badge { font-size: 9.5px; padding: 2px 7px; border-radius: 20px; font-weight: 600; flex-shrink: 0; }
 
-  /* ============================================================
-     CHATBOT
-  ============================================================ */
   .chat-wrap { background: var(--surface); border: 1px solid var(--border); border-radius: var(--r); overflow: hidden; }
   .chat-head { padding: 12px 16px; border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 10px; }
   .bot-orb {
@@ -443,9 +397,7 @@
   }
   .send-btn:hover { opacity: 0.85; }
 
-  /* ============================================================
-     TODAY'S SCHEDULE
-  ============================================================ */
+  .sched-list { padding: 4px 16px 12px; }
   .sched { display: flex; gap: 10px; padding: 8px 0; border-bottom: 1px solid var(--border); }
   .sched:last-child { border-bottom: none; }
   .sched-time { font-size: 10px; color: var(--text2); min-width: 50px; padding-top: 2px; }
@@ -453,9 +405,8 @@
   .sched-name { font-size: 12.5px; font-weight: 500; }
   .sched-room { font-size: 10px; color: var(--text3); margin-top: 1px; }
 
-  /* ============================================================
-     RESPONSIVE BREAKPOINTS
-  ============================================================ */
+  .sched-sec { background: var(--surface); border: 1px solid var(--border); border-radius: var(--r); overflow: hidden; }
+
   @media (max-width: 1100px) {
     .stats { grid-template-columns: repeat(2, 1fr); }
   }
@@ -483,54 +434,50 @@
   <!-- OVERLAY -->
   <div class="overlay" id="overlay" onclick="closeDrawer()"></div>
 
-  <!-- ========================================================
-  </div>
+  <!-- DRAWER -->
+  <nav class="drawer" id="drawer" aria-label="Main navigation">
+
+    <!-- Profile Header -->
+    <div class="drw-profile">
+      <div class="drw-profile-top">
+        <div class="drw-avatar">AS</div>
+        <div>
+          <div class="drw-name">Aryan Shah</div>
+          <div class="drw-meta">SE Sem 4 &nbsp;&#183;&nbsp; Computer Engg</div>
+          <div class="drw-prn">PRN: 2210023456</div>
+        </div>
+      </div>
+      <div class="drw-btns">
+        <button class="drw-btn" onclick="navigate('profile.html')">&#128100; Profile</button>
+        <button class="drw-btn highlight" onclick="navigate('fees.html')">&#128179; Pay Fee</button>
+      </div>
     </div>
- 
+
     <!-- Quick Access Icon Grid -->
     <div class="drw-section-label">Quick Access</div>
     <div class="drw-grid">
- 
+
       <div class="drw-icon-btn" onclick="navigate('dashboard.html')">
         <div class="drw-icon-wrap">
           <div class="drw-icon-circle">&#127968;</div>
         </div>
         <div class="drw-icon-label">Dashboard</div>
       </div>
- 
+
       <div class="drw-icon-btn" onclick="navigate('notices.html')">
         <div class="drw-icon-wrap">
           <div class="drw-icon-circle">&#128226;</div>
         </div>
         <div class="drw-icon-label">Notices</div>
       </div>
-      </div>
-    </div>
- 
-    <!-- Quick Access Icon Grid -->
-    <div class="drw-section-label">Quick Access</div>
-    <div class="drw-grid">
- 
-      <div class="drw-icon-btn" onclick="navigate('dashboard.html')">
-        <div class="drw-icon-wrap">
-          <div class="drw-icon-circle">&#127968;</div>
-        </div>
-        <div class="drw-icon-label">Dashboard</div>
-      </div>
- 
-      <div class="drw-icon-btn" onclick="navigate('notices.html')">
-        <div class="drw-icon-wrap">
-          <div class="drw-icon-circle">&#128226;</div>
-        </div>
-        <div class="drw-icon-label">Notices</div>
-      </div>
+
       <div class="drw-icon-btn" onclick="navigate('assignments.html')">
         <div class="drw-icon-wrap">
           <div class="drw-icon-circle">&#128218;</div>
         </div>
         <div class="drw-icon-label">Assignments</div>
       </div>
- 
+
       <div class="drw-icon-btn" onclick="navigate('notes.html')">
         <div class="drw-icon-wrap">
           <div class="drw-icon-circle">&#128196;</div>
@@ -538,13 +485,14 @@
         </div>
         <div class="drw-icon-label">Notes</div>
       </div>
- 
+
       <div class="drw-icon-btn" onclick="navigate('quiz.html')">
         <div class="drw-icon-wrap">
           <div class="drw-icon-circle">&#128221;</div>
         </div>
         <div class="drw-icon-label">Test Series</div>
       </div>
+
       <div class="drw-icon-btn" onclick="navigate('timetable.html')">
         <div class="drw-icon-wrap">
           <div class="drw-icon-circle">&#128197;</div>
@@ -552,53 +500,55 @@
         </div>
         <div class="drw-icon-label">Timetable</div>
       </div>
- 
+
       <div class="drw-icon-btn" onclick="navigate('grades.html')">
         <div class="drw-icon-wrap">
           <div class="drw-icon-circle">&#128202;</div>
         </div>
         <div class="drw-icon-label">Grades</div>
       </div>
- 
+
       <div class="drw-icon-btn" onclick="navigate('library.html')">
         <div class="drw-icon-wrap">
           <div class="drw-icon-circle">&#128214;</div>
         </div>
         <div class="drw-icon-label">Library</div>
       </div>
+
       <div class="drw-icon-btn" onclick="navigate('scholarship.html')">
         <div class="drw-icon-wrap">
           <div class="drw-icon-circle">&#128176;</div>
         </div>
         <div class="drw-icon-label">Scholarship</div>
       </div>
- 
+
       <div class="drw-icon-btn" onclick="navigate('fees.html')">
         <div class="drw-icon-wrap">
           <div class="drw-icon-circle">&#128179;</div>
         </div>
         <div class="drw-icon-label">Fee Payment</div>
       </div>
- 
+
       <div class="drw-icon-btn" onclick="navigate('chatbot.html')">
         <div class="drw-icon-wrap">
           <div class="drw-icon-circle">&#129302;</div>
         </div>
         <div class="drw-icon-label">Campus Bot</div>
       </div>
+
       <div class="drw-icon-btn" onclick="navigate('settings.html')">
         <div class="drw-icon-wrap">
           <div class="drw-icon-circle">&#9881;&#65039;</div>
         </div>
         <div class="drw-icon-label">Settings</div>
       </div>
- 
+
     </div>
- 
-    <!-- Preferences / Toggle Switches -->
+
+    <!-- Preferences -->
     <div class="drw-section-label">Preferences</div>
     <div class="drw-toggles">
- 
+
       <div class="drw-toggle-row" onclick="toggleSw('sw-dark')">
         <div class="drw-toggle-icon">&#127769;</div>
         <div class="drw-toggle-text">
@@ -607,6 +557,7 @@
         </div>
         <div class="toggle-sw on" id="sw-dark"></div>
       </div>
+
       <div class="drw-toggle-row" onclick="toggleSw('sw-notif')">
         <div class="drw-toggle-icon">&#128276;</div>
         <div class="drw-toggle-text">
@@ -615,7 +566,7 @@
         </div>
         <div class="toggle-sw on" id="sw-notif"></div>
       </div>
- 
+
       <div class="drw-toggle-row" onclick="toggleSw('sw-offline')">
         <div class="drw-toggle-icon">&#128225;</div>
         <div class="drw-toggle-text">
@@ -624,6 +575,7 @@
         </div>
         <div class="toggle-sw" id="sw-offline"></div>
       </div>
+
       <div class="drw-toggle-row" onclick="toggleSw('sw-beta')">
         <div class="drw-toggle-icon">&#10024;</div>
         <div class="drw-toggle-text">
@@ -632,20 +584,18 @@
         </div>
         <div class="toggle-sw" id="sw-beta"></div>
       </div>
- 
+
     </div>
- 
+
     <!-- Sign Out -->
     <button class="drw-signout" onclick="alert('Sign out clicked')">&#128682; Sign Out</button>
- 
+
   </nav>
- 
-  <!-- ============================================================
-       ICON SIDEBAR — desktop
-  ============================================================ -->
+
+  <!-- ICON SIDEBAR — desktop -->
   <aside class="sidebar" aria-label="Icon sidebar">
     <div class="sb-logo" onclick="openDrawer()" title="Open menu">CA</div>
- 
+
     <div class="sb-item active" onclick="setActive(this); navigate('dashboard.html')">
       <span style="font-size:16px">&#127968;</span><div class="sb-tip">Dashboard</div>
     </div>
@@ -670,19 +620,18 @@
     <div class="sb-item" onclick="setActive(this); navigate('grades.html')">
       <span style="font-size:16px">&#128202;</span><div class="sb-tip">Grades</div>
     </div>
- 
+
     <div class="sb-spacer"></div>
- 
+
     <div class="sb-item" onclick="setActive(this); navigate('settings.html')">
       <span style="font-size:16px">&#9881;&#65039;</span><div class="sb-tip">Settings</div>
     </div>
     <div class="sb-avatar" onclick="openDrawer()" title="Open profile">AS</div>
   </aside>
- 
-  <!-- ============================================================
-       MAIN CONTENT
-  ============================================================ -->
+
+  <!-- MAIN CONTENT -->
   <div class="main">
+
     <!-- Topbar -->
     <header class="topbar">
       <div class="tb-left">
@@ -700,12 +649,13 @@
         <button class="tb-btn primary">+ New Request</button>
       </div>
     </header>
- 
+
     <!-- Scrollable Page Content -->
     <main class="content">
- 
+
       <!-- STAT CARDS -->
       <section class="stats" aria-label="Key stats">
+
         <div class="stat-card" style="--c:#4f8ef7" onclick="navigate('assignments.html')">
           <div class="sc-row">
             <div class="sc-icon-box">&#128218;</div>
@@ -714,7 +664,7 @@
           <div class="sc-val">3</div>
           <div class="sc-label">Pending Assignments</div>
         </div>
- 
+
         <div class="stat-card" style="--c:#38d9a9" onclick="navigate('quiz.html')">
           <div class="sc-row">
             <div class="sc-icon-box">&#128221;</div>
@@ -723,7 +673,7 @@
           <div class="sc-val">1</div>
           <div class="sc-label">Active Quiz &nbsp;&#183;&nbsp; Unit 1</div>
         </div>
- 
+
         <div class="stat-card" style="--c:#f7a94f" onclick="navigate('scholarship.html')">
           <div class="sc-row">
             <div class="sc-icon-box">&#128176;</div>
@@ -732,7 +682,7 @@
           <div class="sc-val">Apr 15</div>
           <div class="sc-label">Scholarship Deadline</div>
         </div>
- 
+
         <div class="stat-card" style="--c:#7c5cfc" onclick="navigate('fees.html')">
           <div class="sc-row">
             <div class="sc-icon-box">&#128179;</div>
@@ -741,10 +691,10 @@
           <div class="sc-val">&#8377;42k</div>
           <div class="sc-label">Fee Due</div>
         </div>
- 
+
       </section>
- 
-      <!-- QUICK ACCESS STRIP — PW-style -->
+
+      <!-- QUICK ACCESS STRIP -->
       <section class="quick-strip" aria-label="Quick access shortcuts">
         <div class="qa-item" onclick="navigate('notes.html')">
           <div class="qa-circle">&#128196;</div><div class="qa-lbl">Notes</div>
@@ -771,26 +721,26 @@
           <div class="qa-circle">&#129302;</div><div class="qa-lbl">Campus Bot</div>
         </div>
       </section>
- 
+
       <!-- NOTICES + DEADLINES -->
       <div class="grid2">
- 
+
         <div class="sec">
           <div class="sec-head">
             <h3>&#128226; Latest Notices</h3>
             <span class="see-all" onclick="navigate('notices.html')">See all &#8594;</span>
           </div>
           <div class="sec-body">
- 
+
             <div class="ni">
               <div class="ni-dot" style="background:#f76f6f"></div>
               <div>
                 <div class="ni-title">Exam Registration &mdash; Last Date Apr 20</div>
                 <div class="chip" style="background:rgba(247,111,111,.15);color:#f76f6f">Urgent</div>
                 <div class="ni-time">2 hours ago</div>
-                </div>
+              </div>
             </div>
- 
+
             <div class="ni">
               <div class="ni-dot" style="background:#f7a94f"></div>
               <div>
@@ -799,7 +749,7 @@
                 <div class="ni-time">Yesterday</div>
               </div>
             </div>
- 
+
             <div class="ni">
               <div class="ni-dot" style="background:#38d9a9"></div>
               <div>
@@ -808,6 +758,7 @@
                 <div class="ni-time">1 day ago</div>
               </div>
             </div>
+
             <div class="ni">
               <div class="ni-dot" style="background:#4f8ef7"></div>
               <div>
@@ -816,25 +767,26 @@
                 <div class="ni-time">2 days ago</div>
               </div>
             </div>
- 
+
           </div>
         </div>
- 
+
         <div class="sec">
           <div class="sec-head">
             <h3>&#128218; Assignment Deadlines</h3>
             <span class="see-all" onclick="navigate('assignments.html')">See all &#8594;</span>
           </div>
           <div class="sec-body">
- 
+
             <div class="dl">
               <div class="dl-wrap">
                 <div class="dl-name">Data Structures &mdash; Linked Lists</div>
                 <div class="dl-due">Due: Tomorrow 11:59 PM</div>
-                </div>
-              <div class="dl-badge" style="background:rgba(56,217,169,.15);color:#38d9a9">7 days</div>
+                <div class="dl-bar"><div class="dl-fill" style="width:85%;background:#38d9a9"></div></div>
+              </div>
+              <div class="dl-badge" style="background:rgba(56,217,169,.15);color:#38d9a9">1 day</div>
             </div>
- 
+
             <div class="dl">
               <div class="dl-wrap">
                 <div class="dl-name">SE Lab &mdash; UML Diagrams</div>
@@ -843,14 +795,24 @@
               </div>
               <div class="dl-badge" style="background:rgba(79,142,247,.15);color:#4f8ef7">12 days</div>
             </div>
- 
+
+            <div class="dl">
+              <div class="dl-wrap">
+                <div class="dl-name">TOC &mdash; Automata Exercises</div>
+                <div class="dl-due">Due: Apr 17</div>
+                <div class="dl-bar"><div class="dl-fill" style="width:40%;background:#f7a94f"></div></div>
+              </div>
+              <div class="dl-badge" style="background:rgba(247,169,79,.15);color:#f7a94f">7 days</div>
+            </div>
+
           </div>
         </div>
- 
+
       </div>
- 
+
       <!-- CHATBOT + SCHEDULE -->
       <div class="grid2">
+
         <!-- Chatbot -->
         <div class="chat-wrap">
           <div class="chat-head">
@@ -872,6 +834,44 @@
               autocomplete="off"
             >
             <button class="send-btn" onclick="sendMsg()" aria-label="Send message">&#10148;</button>
+          </div>
+        </div>
+
+        <!-- Today's Schedule -->
+        <div class="sched-sec">
+          <div class="sec-head">
+            <h3>&#128197; Today's Schedule</h3>
+            <span class="see-all" onclick="navigate('timetable.html')">See all &#8594;</span>
+          </div>
+          <div class="sched-list">
+
+            <div class="sched">
+              <div class="sched-time">9:00 AM</div>
+              <div class="sched-bar" style="background:#4f8ef7"></div>
+              <div>
+                <div class="sched-name">Data Structures</div>
+                <div class="sched-room">Room 201 &nbsp;&#183;&nbsp; Prof. Sharma</div>
+              </div>
+            </div>
+
+            <div class="sched">
+              <div class="sched-time">11:00 AM</div>
+              <div class="sched-bar" style="background:#38d9a9"></div>
+              <div>
+                <div class="sched-name">DBMS Lab</div>
+                <div class="sched-room">Lab 102 &nbsp;&#183;&nbsp; Prof. Mehta</div>
+              </div>
+            </div>
+
+            <div class="sched">
+              <div class="sched-time">1:30 PM</div>
+              <div class="sched-bar" style="background:#7c5cfc"></div>
+              <div>
+                <div class="sched-name">Theory of Computation</div>
+                <div class="sched-room">Room 304 &nbsp;&#183;&nbsp; Prof. Kulkarni</div>
+              </div>
+            </div>
+
             <div class="sched">
               <div class="sched-time">3:30 PM</div>
               <div class="sched-bar" style="background:#f7a94f"></div>
@@ -880,7 +880,7 @@
                 <div class="sched-room">Room 105 &nbsp;&#183;&nbsp; Prof. Joshi</div>
               </div>
             </div>
- 
+
             <div class="sched">
               <div class="sched-time">5:00 PM</div>
               <div class="sched-bar" style="background:#f76f6f"></div>
@@ -889,30 +889,22 @@
                 <div class="sched-room">Room 301 &nbsp;&#183;&nbsp; Prof. Patil</div>
               </div>
             </div>
- 
+
           </div>
         </div>
- 
+
       </div>
- 
+
     </main>
   </div><!-- end .main -->
 </div><!-- end .shell -->
- 
-<!-- ============================================================
-     JAVASCRIPT
-============================================================ -->
+
 <script>
-  /* ── Navigation ─────────────────────────────────────────────
-     Replace navigate() body with window.location.href = page
-     once your other pages are ready.
-  ──────────────────────────────────────────────────────────── */
   function navigate(page) {
     closeDrawer();
     window.location.href = page;
   }
- 
-  /* ── Drawer ─────────────────────────────────────────────── */
+
   function openDrawer() {
     document.getElementById('drawer').classList.add('open');
     document.getElementById('overlay').classList.add('open');
@@ -926,20 +918,18 @@
   document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape') closeDrawer();
   });
- 
-  /* ── Toggle switches ────────────────────────────────────── */
+
   function toggleSw(id) {
     document.getElementById(id).classList.toggle('on');
   }
-/* ── Sidebar active state ───────────────────────────────── */
+
   function setActive(el) {
     document.querySelectorAll('.sb-item').forEach(function(n) {
       n.classList.remove('active');
     });
     el.classList.add('active');
   }
- 
-  /* ── Dynamic date in topbar ─────────────────────────────── */
+
   (function() {
     var days   = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
     var months = ['January','February','March','April','May','June',
@@ -951,8 +941,7 @@
     var el = document.getElementById('topbar-date');
     if (el) el.innerHTML = str;
   })();
- 
-  /* ── Campus Bot ─────────────────────────────────────────── */
+
   var botReplies = {
     'deadline':    [
       'DS Linked Lists is due TOMORROW at 11:59 PM \u2014 most urgent! \ud83d\udea8',
@@ -979,6 +968,7 @@
       'Let me know what you need \u2014 I\'m here for anything campus-related! \ud83d\ude0a'
     ]
   };
+
   function escapeHtml(str) {
     return str
       .replace(/&/g, '&amp;')
@@ -987,33 +977,33 @@
       .replace(/"/g, '&quot;')
       .replace(/'/g, '&#039;');
   }
- 
+
   async function sendMsg() {
     var inp  = document.getElementById('chatIn');
     var body = document.getElementById('chatBody');
     var val  = (inp.value || '').trim();
     if (!val) return;
- 
+
     body.innerHTML += '<div class="msg user">' + escapeHtml(val) + '</div>';
     inp.value = '';
     body.scrollTop = body.scrollHeight;
- 
+
     body.innerHTML += '<div class="msg bot typing" id="typing">Thinking<span id="dots"></span></div>';
     body.scrollTop = body.scrollHeight;
- 
-    var dotsEl    = document.getElementById('dots');
-    var dotCount  = 0;
-    var dotTimer  = setInterval(function() {
+
+    var dotsEl   = document.getElementById('dots');
+    var dotCount = 0;
+    var dotTimer = setInterval(function() {
       dotCount = (dotCount + 1) % 4;
       if (dotsEl) dotsEl.textContent = '.'.repeat(dotCount);
     }, 300);
- 
+
     await new Promise(function(r) { setTimeout(r, 900); });
     clearInterval(dotTimer);
- 
+
     var t = document.getElementById('typing');
     if (t) t.remove();
- 
+
     var lc  = val.toLowerCase();
     var key = null;
     var keys = Object.keys(botReplies);
@@ -1028,6 +1018,6 @@
     body.scrollTop = body.scrollHeight;
   }
 </script>
- 
+
 </body>
 </html>
