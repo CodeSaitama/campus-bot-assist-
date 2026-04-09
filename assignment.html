@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Assignments - CampusAI</title>
+<style>
+body { margin:0; font-family:'Poppins', sans-serif; background:#0b1120; color:white; }
+.navbar { height:60px; background:#020617; display:flex; justify-content:space-between; align-items:center; padding:0 20px; border-bottom:1px solid #1e293b; }
+.sidebar { width:220px; min-width:150px; background:#020617; height:calc(100vh - 60px); padding:20px; float:left; }
+.sidebar ul { list-style:none; padding:0; }
+.sidebar li { padding:10px; border-radius:8px; margin:10px 0; cursor:pointer; }
+.sidebar li:hover { background:#1e293b; }
+.main { margin-left:220px; padding:20px; }
+@media screen and (max-width:768px) {
+  .sidebar { width:100%; height:auto; float:none; }
+  .main { margin-left:0; }
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+  <h2>CampusAI 🎓</h2>
+  <div>👤 Student</div>
+</div>
+<div class="sidebar">
+  <ul>
+    <li onclick="window.location.href='dashboard.html'">🏠 Dashboard</li>
+    <li onclick="window.location.href='notes.html'">📄 Notes</li>
+    <li onclick="window.location.href='assignments.html'">📚 Assignments</li>
+    <li onclick="window.location.href='quiz.html'">📝 Quiz</li>
+  </ul>
+</div>
+<div class="main">
+  <h1>Assignments</h1>
+  <ul>
+    <li>📚 Physics Assignment 1 - <a href="#">Download</a></li>
+    <li>📚 Math Assignment 1 - <a href="#">Download</a></li>
+    <li>📚 Chemistry Assignment 1 - <a href="#">Download</a></li>
+  </ul>
+</div>
+</body>
+</html>
