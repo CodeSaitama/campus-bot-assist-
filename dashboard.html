@@ -484,3 +484,550 @@
   <div class="overlay" id="overlay" onclick="closeDrawer()"></div>
 
   <!-- ========================================================
+  </div>
+    </div>
+ 
+    <!-- Quick Access Icon Grid -->
+    <div class="drw-section-label">Quick Access</div>
+    <div class="drw-grid">
+ 
+      <div class="drw-icon-btn" onclick="navigate('dashboard.html')">
+        <div class="drw-icon-wrap">
+          <div class="drw-icon-circle">&#127968;</div>
+        </div>
+        <div class="drw-icon-label">Dashboard</div>
+      </div>
+ 
+      <div class="drw-icon-btn" onclick="navigate('notices.html')">
+        <div class="drw-icon-wrap">
+          <div class="drw-icon-circle">&#128226;</div>
+        </div>
+        <div class="drw-icon-label">Notices</div>
+      </div>
+      </div>
+    </div>
+ 
+    <!-- Quick Access Icon Grid -->
+    <div class="drw-section-label">Quick Access</div>
+    <div class="drw-grid">
+ 
+      <div class="drw-icon-btn" onclick="navigate('dashboard.html')">
+        <div class="drw-icon-wrap">
+          <div class="drw-icon-circle">&#127968;</div>
+        </div>
+        <div class="drw-icon-label">Dashboard</div>
+      </div>
+ 
+      <div class="drw-icon-btn" onclick="navigate('notices.html')">
+        <div class="drw-icon-wrap">
+          <div class="drw-icon-circle">&#128226;</div>
+        </div>
+        <div class="drw-icon-label">Notices</div>
+      </div>
+      <div class="drw-icon-btn" onclick="navigate('assignments.html')">
+        <div class="drw-icon-wrap">
+          <div class="drw-icon-circle">&#128218;</div>
+        </div>
+        <div class="drw-icon-label">Assignments</div>
+      </div>
+ 
+      <div class="drw-icon-btn" onclick="navigate('notes.html')">
+        <div class="drw-icon-wrap">
+          <div class="drw-icon-circle">&#128196;</div>
+          <span class="drw-new-badge">New</span>
+        </div>
+        <div class="drw-icon-label">Notes</div>
+      </div>
+ 
+      <div class="drw-icon-btn" onclick="navigate('quiz.html')">
+        <div class="drw-icon-wrap">
+          <div class="drw-icon-circle">&#128221;</div>
+        </div>
+        <div class="drw-icon-label">Test Series</div>
+      </div>
+      <div class="drw-icon-btn" onclick="navigate('timetable.html')">
+        <div class="drw-icon-wrap">
+          <div class="drw-icon-circle">&#128197;</div>
+          <span class="drw-new-badge">New</span>
+        </div>
+        <div class="drw-icon-label">Timetable</div>
+      </div>
+ 
+      <div class="drw-icon-btn" onclick="navigate('grades.html')">
+        <div class="drw-icon-wrap">
+          <div class="drw-icon-circle">&#128202;</div>
+        </div>
+        <div class="drw-icon-label">Grades</div>
+      </div>
+ 
+      <div class="drw-icon-btn" onclick="navigate('library.html')">
+        <div class="drw-icon-wrap">
+          <div class="drw-icon-circle">&#128214;</div>
+        </div>
+        <div class="drw-icon-label">Library</div>
+      </div>
+      <div class="drw-icon-btn" onclick="navigate('scholarship.html')">
+        <div class="drw-icon-wrap">
+          <div class="drw-icon-circle">&#128176;</div>
+        </div>
+        <div class="drw-icon-label">Scholarship</div>
+      </div>
+ 
+      <div class="drw-icon-btn" onclick="navigate('fees.html')">
+        <div class="drw-icon-wrap">
+          <div class="drw-icon-circle">&#128179;</div>
+        </div>
+        <div class="drw-icon-label">Fee Payment</div>
+      </div>
+ 
+      <div class="drw-icon-btn" onclick="navigate('chatbot.html')">
+        <div class="drw-icon-wrap">
+          <div class="drw-icon-circle">&#129302;</div>
+        </div>
+        <div class="drw-icon-label">Campus Bot</div>
+      </div>
+      <div class="drw-icon-btn" onclick="navigate('settings.html')">
+        <div class="drw-icon-wrap">
+          <div class="drw-icon-circle">&#9881;&#65039;</div>
+        </div>
+        <div class="drw-icon-label">Settings</div>
+      </div>
+ 
+    </div>
+ 
+    <!-- Preferences / Toggle Switches -->
+    <div class="drw-section-label">Preferences</div>
+    <div class="drw-toggles">
+ 
+      <div class="drw-toggle-row" onclick="toggleSw('sw-dark')">
+        <div class="drw-toggle-icon">&#127769;</div>
+        <div class="drw-toggle-text">
+          <div class="drw-toggle-label">Dark Mode</div>
+          <div class="drw-toggle-sub">Currently on</div>
+        </div>
+        <div class="toggle-sw on" id="sw-dark"></div>
+      </div>
+      <div class="drw-toggle-row" onclick="toggleSw('sw-notif')">
+        <div class="drw-toggle-icon">&#128276;</div>
+        <div class="drw-toggle-text">
+          <div class="drw-toggle-label">Notifications</div>
+          <div class="drw-toggle-sub">Deadlines &amp; announcements</div>
+        </div>
+        <div class="toggle-sw on" id="sw-notif"></div>
+      </div>
+ 
+      <div class="drw-toggle-row" onclick="toggleSw('sw-offline')">
+        <div class="drw-toggle-icon">&#128225;</div>
+        <div class="drw-toggle-text">
+          <div class="drw-toggle-label">Offline Mode</div>
+          <div class="drw-toggle-sub">Download notes &amp; content</div>
+        </div>
+        <div class="toggle-sw" id="sw-offline"></div>
+      </div>
+      <div class="drw-toggle-row" onclick="toggleSw('sw-beta')">
+        <div class="drw-toggle-icon">&#10024;</div>
+        <div class="drw-toggle-text">
+          <div class="drw-toggle-label">Beta Features</div>
+          <div class="drw-toggle-sub">Early access to new tools</div>
+        </div>
+        <div class="toggle-sw" id="sw-beta"></div>
+      </div>
+ 
+    </div>
+ 
+    <!-- Sign Out -->
+    <button class="drw-signout" onclick="alert('Sign out clicked')">&#128682; Sign Out</button>
+ 
+  </nav>
+ 
+  <!-- ============================================================
+       ICON SIDEBAR — desktop
+  ============================================================ -->
+  <aside class="sidebar" aria-label="Icon sidebar">
+    <div class="sb-logo" onclick="openDrawer()" title="Open menu">CA</div>
+ 
+    <div class="sb-item active" onclick="setActive(this); navigate('dashboard.html')">
+      <span style="font-size:16px">&#127968;</span><div class="sb-tip">Dashboard</div>
+    </div>
+    <div class="sb-item" onclick="setActive(this); navigate('notices.html')">
+      <span style="font-size:16px">&#128226;</span><div class="sb-tip">Notices</div>
+    </div>
+    <div class="sb-item" onclick="setActive(this); navigate('assignments.html')">
+      <span style="font-size:16px">&#128218;</span><div class="sb-tip">Assignments</div>
+    </div>
+    <div class="sb-item" onclick="setActive(this); navigate('notes.html')">
+      <span style="font-size:16px">&#128196;</span><div class="sb-tip">Notes</div>
+    </div>
+    <div class="sb-item" onclick="setActive(this); navigate('quiz.html')">
+      <span style="font-size:16px">&#128221;</span><div class="sb-tip">Quizzes</div>
+    </div>
+    <div class="sb-item" onclick="setActive(this); navigate('scholarship.html')">
+      <span style="font-size:16px">&#128176;</span><div class="sb-tip">Scholarship</div>
+    </div>
+    <div class="sb-item" onclick="setActive(this); navigate('fees.html')">
+      <span style="font-size:16px">&#128179;</span><div class="sb-tip">Fee Payment</div>
+    </div>
+    <div class="sb-item" onclick="setActive(this); navigate('grades.html')">
+      <span style="font-size:16px">&#128202;</span><div class="sb-tip">Grades</div>
+    </div>
+ 
+    <div class="sb-spacer"></div>
+ 
+    <div class="sb-item" onclick="setActive(this); navigate('settings.html')">
+      <span style="font-size:16px">&#9881;&#65039;</span><div class="sb-tip">Settings</div>
+    </div>
+    <div class="sb-avatar" onclick="openDrawer()" title="Open profile">AS</div>
+  </aside>
+ 
+  <!-- ============================================================
+       MAIN CONTENT
+  ============================================================ -->
+  <div class="main">
+    <!-- Topbar -->
+    <header class="topbar">
+      <div class="tb-left">
+        <button class="menu-btn" onclick="openDrawer()" aria-label="Open navigation">&#9776;</button>
+        <div class="tb-title">
+          <h1>Good Morning, Aryan &#128075;</h1>
+          <p id="topbar-date">SE Sem 4 &nbsp;&#183;&nbsp; Computer Engineering</p>
+        </div>
+      </div>
+      <div class="tb-right">
+        <button class="tb-btn" aria-label="Notifications" style="position:relative">
+          &#128276;
+          <div class="notif-dot"></div>
+        </button>
+        <button class="tb-btn primary">+ New Request</button>
+      </div>
+    </header>
+ 
+    <!-- Scrollable Page Content -->
+    <main class="content">
+ 
+      <!-- STAT CARDS -->
+      <section class="stats" aria-label="Key stats">
+        <div class="stat-card" style="--c:#4f8ef7" onclick="navigate('assignments.html')">
+          <div class="sc-row">
+            <div class="sc-icon-box">&#128218;</div>
+            <div class="sc-change" style="background:rgba(247,111,111,.15);color:#f76f6f">+1 new</div>
+          </div>
+          <div class="sc-val">3</div>
+          <div class="sc-label">Pending Assignments</div>
+        </div>
+ 
+        <div class="stat-card" style="--c:#38d9a9" onclick="navigate('quiz.html')">
+          <div class="sc-row">
+            <div class="sc-icon-box">&#128221;</div>
+            <div class="sc-change" style="background:rgba(56,217,169,.15);color:#38d9a9">Live</div>
+          </div>
+          <div class="sc-val">1</div>
+          <div class="sc-label">Active Quiz &nbsp;&#183;&nbsp; Unit 1</div>
+        </div>
+ 
+        <div class="stat-card" style="--c:#f7a94f" onclick="navigate('scholarship.html')">
+          <div class="sc-row">
+            <div class="sc-icon-box">&#128176;</div>
+            <div class="sc-change" style="background:rgba(247,169,79,.15);color:#f7a94f">5 days</div>
+          </div>
+          <div class="sc-val">Apr 15</div>
+          <div class="sc-label">Scholarship Deadline</div>
+        </div>
+ 
+        <div class="stat-card" style="--c:#7c5cfc" onclick="navigate('fees.html')">
+          <div class="sc-row">
+            <div class="sc-icon-box">&#128179;</div>
+            <div class="sc-change" style="background:rgba(124,92,252,.15);color:#7c5cfc">Apr 25</div>
+          </div>
+          <div class="sc-val">&#8377;42k</div>
+          <div class="sc-label">Fee Due</div>
+        </div>
+ 
+      </section>
+ 
+      <!-- QUICK ACCESS STRIP — PW-style -->
+      <section class="quick-strip" aria-label="Quick access shortcuts">
+        <div class="qa-item" onclick="navigate('notes.html')">
+          <div class="qa-circle">&#128196;</div><div class="qa-lbl">Notes</div>
+        </div>
+        <div class="qa-item" onclick="navigate('quiz.html')">
+          <div class="qa-circle">&#128221;</div><div class="qa-lbl">Test Series</div>
+        </div>
+        <div class="qa-item" onclick="navigate('assignments.html')">
+          <div class="qa-circle">&#128218;</div><div class="qa-lbl">Assignments</div>
+        </div>
+        <div class="qa-item" onclick="navigate('notices.html')">
+          <div class="qa-circle">&#128226;</div><div class="qa-lbl">Notices</div>
+        </div>
+        <div class="qa-item" onclick="navigate('library.html')">
+          <div class="qa-circle">&#128214;</div><div class="qa-lbl">Library</div>
+        </div>
+        <div class="qa-item" onclick="navigate('grades.html')">
+          <div class="qa-circle">&#128202;</div><div class="qa-lbl">Grades</div>
+        </div>
+        <div class="qa-item" onclick="navigate('scholarship.html')">
+          <div class="qa-circle">&#128176;</div><div class="qa-lbl">Scholarship</div>
+        </div>
+        <div class="qa-item" onclick="navigate('chatbot.html')">
+          <div class="qa-circle">&#129302;</div><div class="qa-lbl">Campus Bot</div>
+        </div>
+      </section>
+ 
+      <!-- NOTICES + DEADLINES -->
+      <div class="grid2">
+ 
+        <div class="sec">
+          <div class="sec-head">
+            <h3>&#128226; Latest Notices</h3>
+            <span class="see-all" onclick="navigate('notices.html')">See all &#8594;</span>
+          </div>
+          <div class="sec-body">
+ 
+            <div class="ni">
+              <div class="ni-dot" style="background:#f76f6f"></div>
+              <div>
+                <div class="ni-title">Exam Registration &mdash; Last Date Apr 20</div>
+                <div class="chip" style="background:rgba(247,111,111,.15);color:#f76f6f">Urgent</div>
+                <div class="ni-time">2 hours ago</div>
+                </div>
+            </div>
+ 
+            <div class="ni">
+              <div class="ni-dot" style="background:#f7a94f"></div>
+              <div>
+                <div class="ni-title">Scholarship Applications Open</div>
+                <div class="chip" style="background:rgba(247,169,79,.15);color:#f7a94f">Finance</div>
+                <div class="ni-time">Yesterday</div>
+              </div>
+            </div>
+ 
+            <div class="ni">
+              <div class="ni-dot" style="background:#38d9a9"></div>
+              <div>
+                <div class="ni-title">DBMS Unit 3 Notes Uploaded</div>
+                <div class="chip" style="background:rgba(56,217,169,.15);color:#38d9a9">Academic</div>
+                <div class="ni-time">1 day ago</div>
+              </div>
+            </div>
+            <div class="ni">
+              <div class="ni-dot" style="background:#4f8ef7"></div>
+              <div>
+                <div class="ni-title">Hackathon 2026 &mdash; Team Registrations Open</div>
+                <div class="chip" style="background:rgba(79,142,247,.15);color:#4f8ef7">Event</div>
+                <div class="ni-time">2 days ago</div>
+              </div>
+            </div>
+ 
+          </div>
+        </div>
+ 
+        <div class="sec">
+          <div class="sec-head">
+            <h3>&#128218; Assignment Deadlines</h3>
+            <span class="see-all" onclick="navigate('assignments.html')">See all &#8594;</span>
+          </div>
+          <div class="sec-body">
+ 
+            <div class="dl">
+              <div class="dl-wrap">
+                <div class="dl-name">Data Structures &mdash; Linked Lists</div>
+                <div class="dl-due">Due: Tomorrow 11:59 PM</div>
+                </div>
+              <div class="dl-badge" style="background:rgba(56,217,169,.15);color:#38d9a9">7 days</div>
+            </div>
+ 
+            <div class="dl">
+              <div class="dl-wrap">
+                <div class="dl-name">SE Lab &mdash; UML Diagrams</div>
+                <div class="dl-due">Due: Apr 22</div>
+                <div class="dl-bar"><div class="dl-fill" style="width:15%;background:#4f8ef7"></div></div>
+              </div>
+              <div class="dl-badge" style="background:rgba(79,142,247,.15);color:#4f8ef7">12 days</div>
+            </div>
+ 
+          </div>
+        </div>
+ 
+      </div>
+ 
+      <!-- CHATBOT + SCHEDULE -->
+      <div class="grid2">
+        <!-- Chatbot -->
+        <div class="chat-wrap">
+          <div class="chat-head">
+            <div class="bot-orb">&#129302;</div>
+            <div>
+              <div class="bot-name-txt">Campus Bot</div>
+              <div class="bot-status"><div class="sdot"></div> Online &mdash; ask me anything</div>
+            </div>
+          </div>
+          <div class="chat-body" id="chatBody">
+            <div class="msg bot">Hi Aryan! &#128075; I'm your campus assistant. Ask me about deadlines, notes, fees, schedule, quizzes, or anything campus-related!</div>
+          </div>
+          <div class="chat-input">
+            <input
+              type="text"
+              id="chatIn"
+              placeholder="Ask about fees, quiz, schedule, notes..."
+              onkeydown="if(event.key==='Enter') sendMsg()"
+              autocomplete="off"
+            >
+            <button class="send-btn" onclick="sendMsg()" aria-label="Send message">&#10148;</button>
+            <div class="sched">
+              <div class="sched-time">3:30 PM</div>
+              <div class="sched-bar" style="background:#f7a94f"></div>
+              <div>
+                <div class="sched-name">Software Engineering</div>
+                <div class="sched-room">Room 105 &nbsp;&#183;&nbsp; Prof. Joshi</div>
+              </div>
+            </div>
+ 
+            <div class="sched">
+              <div class="sched-time">5:00 PM</div>
+              <div class="sched-bar" style="background:#f76f6f"></div>
+              <div>
+                <div class="sched-name">CN Tutorial</div>
+                <div class="sched-room">Room 301 &nbsp;&#183;&nbsp; Prof. Patil</div>
+              </div>
+            </div>
+ 
+          </div>
+        </div>
+ 
+      </div>
+ 
+    </main>
+  </div><!-- end .main -->
+</div><!-- end .shell -->
+ 
+<!-- ============================================================
+     JAVASCRIPT
+============================================================ -->
+<script>
+  /* ── Navigation ─────────────────────────────────────────────
+     Replace navigate() body with window.location.href = page
+     once your other pages are ready.
+  ──────────────────────────────────────────────────────────── */
+  function navigate(page) {
+    closeDrawer();
+    window.location.href = page;
+  }
+ 
+  /* ── Drawer ─────────────────────────────────────────────── */
+  function openDrawer() {
+    document.getElementById('drawer').classList.add('open');
+    document.getElementById('overlay').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeDrawer() {
+    document.getElementById('drawer').classList.remove('open');
+    document.getElementById('overlay').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeDrawer();
+  });
+ 
+  /* ── Toggle switches ────────────────────────────────────── */
+  function toggleSw(id) {
+    document.getElementById(id).classList.toggle('on');
+  }
+/* ── Sidebar active state ───────────────────────────────── */
+  function setActive(el) {
+    document.querySelectorAll('.sb-item').forEach(function(n) {
+      n.classList.remove('active');
+    });
+    el.classList.add('active');
+  }
+ 
+  /* ── Dynamic date in topbar ─────────────────────────────── */
+  (function() {
+    var days   = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+    var months = ['January','February','March','April','May','June',
+                  'July','August','September','October','November','December'];
+    var now    = new Date();
+    var str    = days[now.getDay()] + ', ' +
+                 months[now.getMonth()] + ' ' + now.getDate() +
+                 ' &nbsp;&#183;&nbsp; SE Sem 4 &nbsp;&#183;&nbsp; Computer Engineering';
+    var el = document.getElementById('topbar-date');
+    if (el) el.innerHTML = str;
+  })();
+ 
+  /* ── Campus Bot ─────────────────────────────────────────── */
+  var botReplies = {
+    'deadline':    [
+      'DS Linked Lists is due TOMORROW at 11:59 PM \u2014 most urgent! \ud83d\udea8',
+      'ER Diagram due Apr 13 \u00b7 TOC Automata Apr 17 \u00b7 UML Apr 22. Check the deadline panel!'
+    ],
+    'assignment':  [
+      'You have 3 pending assignments. Most critical: DS Linked Lists due tomorrow! \ud83d\udcda',
+      'Assignments: DS Linked Lists (tomorrow), DBMS ER Diagram (Apr 13), TOC Automata (Apr 17).'
+    ],
+    'fee':         ['Fee deadline is April 25. Amount: \u20b942,000. Head to Fee Payment. \ud83d\udcb3'],
+    'scholarship': ['Scholarship deadline is April 15 \u2014 only 5 days left! Apply via Scholarships. \ud83d\udcb0'],
+    'quiz':        ['Unit 1 Quiz is LIVE right now! Closes at 11:59 PM tonight. Go to Quizzes. \ud83d\udcdd'],
+    'note':        ['DBMS Unit 3 notes were uploaded yesterday. Check the Notes section! \ud83d\udcc4'],
+    'exam':        ['Exam registration closes April 20. See Notices for the registration link. \ud83d\udccb'],
+    'schedule':    ['Today: DS (9AM) \u2192 DBMS Lab (11AM) \u2192 TOC (1:30PM) \u2192 SE (3:30PM) \u2192 CN Tutorial (5PM). \ud83d\udcc5'],
+    'timetable':   ['Today: DS (9AM) \u2192 DBMS Lab (11AM) \u2192 TOC (1:30PM) \u2192 SE (3:30PM) \u2192 CN Tutorial (5PM). \ud83d\udcc5'],
+    'grade':       ['Grades are in the Grades section. Avg CGPA this semester: 8.4 \ud83d\udcca'],
+    'library':     ['Library has notes and references for all subjects. Check the Library section! \ud83d\udcd6'],
+    'hackathon':   ['Hackathon 2026 team registrations are open! See Notices for details. \ud83c\udfc6'],
+    'notice':      ['Latest: Exam Registration (Apr 20), Scholarship (Apr 15), DBMS notes uploaded. \ud83d\udce2'],
+    'default':     [
+      'I can help with deadlines, fees, quizzes, notes, schedule and more \u2014 just ask! \ud83e\udd16',
+      'Try asking about a topic like "deadline", "fee", "schedule", or "quiz". \ud83d\udca1',
+      'Let me know what you need \u2014 I\'m here for anything campus-related! \ud83d\ude0a'
+    ]
+  };
+  function escapeHtml(str) {
+    return str
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#039;');
+  }
+ 
+  async function sendMsg() {
+    var inp  = document.getElementById('chatIn');
+    var body = document.getElementById('chatBody');
+    var val  = (inp.value || '').trim();
+    if (!val) return;
+ 
+    body.innerHTML += '<div class="msg user">' + escapeHtml(val) + '</div>';
+    inp.value = '';
+    body.scrollTop = body.scrollHeight;
+ 
+    body.innerHTML += '<div class="msg bot typing" id="typing">Thinking<span id="dots"></span></div>';
+    body.scrollTop = body.scrollHeight;
+ 
+    var dotsEl    = document.getElementById('dots');
+    var dotCount  = 0;
+    var dotTimer  = setInterval(function() {
+      dotCount = (dotCount + 1) % 4;
+      if (dotsEl) dotsEl.textContent = '.'.repeat(dotCount);
+    }, 300);
+ 
+    await new Promise(function(r) { setTimeout(r, 900); });
+    clearInterval(dotTimer);
+ 
+    var t = document.getElementById('typing');
+    if (t) t.remove();
+ 
+    var lc  = val.toLowerCase();
+    var key = null;
+    var keys = Object.keys(botReplies);
+    for (var i = 0; i < keys.length; i++) {
+      if (keys[i] !== 'default' && lc.indexOf(keys[i]) !== -1) {
+        key = keys[i]; break;
+      }
+    }
+    var arr   = botReplies[key || 'default'];
+    var reply = arr[Math.floor(Math.random() * arr.length)];
+    body.innerHTML += '<div class="msg bot">' + reply + '</div>';
+    body.scrollTop = body.scrollHeight;
+  }
+</script>
+ 
+</body>
+</html>
