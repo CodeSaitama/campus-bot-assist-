@@ -5,70 +5,110 @@
   <head>
   <title>CampusAI</title>
   <style>
-    body {
-      background: rgba(255,255,255,0.1);
-      color: #e2e8f0;
-      font-family: Arial, sans-serif;
-      padding: 20px;
-    }
+  body {
+  margin: 0;
+  font-family: Arial;
+  background: #0f172a;
+  color: white;
+}
 
-    h1 {
-      text-align: center;
-      margin-bottom: 20px;
-    }
+.container {
+  display: flex;
+}
 
-    h2 {
-      margin-top: 20px;
-      color: #38bdf8;
-    }
+.sidebar {
+  width: 220px;
+  background: #020617;
+  height: 100vh;
+  padding: 20px;
+}
 
-    p {
-      background: rgba(255,255,255,0.05);
-      padding: 10px;
-      border-radius: 10px;
-      backdrop-filter: blur(10px);
-    }
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
 
-    input {
-      padding: 10px;
-      border-radius: 8px;
-      border: none;
-      margin-top: 10px;
-    }
+.sidebar li {
+  margin: 15px 0;
+  cursor: pointer;
+}
 
-    button {
-      padding: 10px 15px;
-      border-radius: 8px;
-      border: none;
-      background: #38bdf8;
-      color: black;
-      cursor: pointer;
-      margin-left: 5px;
-    }
+.main {
+  flex: 1;
+  padding: 20px;
+}
 
-    button:hover {
-      background: #0ea5e9;
-    }
+.cards {
+  display: flex;
+  gap: 15px;
+}
+
+.card {
+  background: rgba(255,255,255,0.05);
+  padding: 20px;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+}
+
+.chatbot {
+  margin-top: 30px;
+}
+
+input {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+}
+
+button {
+  padding: 10px;
+  border-radius: 8px;
+  background: #38bdf8;
+  border: none;
+  cursor: pointer;
+}
   </style>
 </head>
 </head>
   <body>
-  <h1>CampusAI </h1>
-  <p>Your smart campus assistant</p>
+  <body>
 
-  <h2> Notices</h2>
-  <p>Exam registration ends on April 20</p>
+<div class="container">
 
-  <h2> Assignments</h2>
-  <p>Math assignment due tomorrow</p>
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h2>CampusAI 🎓</h2>
+    <ul>
+      <li>Dashboard</li>
+      <li>Notices</li>
+      <li>Assignments</li>
+      <li>Scholarships</li>
+      <li>Chatbot</li>
+    </ul>
+  </div>
 
-  <h2> Scholarships</h2>
-  <p>NSP deadline April 25</p>
-  <h2>🤖 Ask CampusAI</h2>
-  <input type="text" id="userInput" placeholder="Ask something...">
-  <button onclick="getAnswer()">Ask</button>
-  <p id="response"></p>
-    <script>
+  <!-- Main Content -->
+  <div class="main">
+
+    <h1>Dashboard</h1>
+
+    <div class="cards">
+      <div class="card">📢 Exam ends April 20</div>
+      <div class="card">📚 Assignment due tomorrow</div>
+      <div class="card">💰 Scholarship April 15</div>
+    </div>
+
+    <div class="chatbot">
+      <h2>🤖 Campus Bot</h2>
+      <input type="text" id="userInput" placeholder="Ask something...">
+      <button onclick="getAnswer()">Ask</button>
+      <p id="response"></p>
+    </div>
+
+  </div>
+
+</div>
+
 function getAnswer() {
   let input = document.getElementById("userInput").value.toLowerCase();
   let response = document.getElementById("response");
